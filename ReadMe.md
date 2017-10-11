@@ -23,7 +23,7 @@ Configure OpenCV
 
      - goto:   File -> New -> Import Module
      
-     - Source Directory:   "<path>\OpenCV-android-sdk\sdk\java"
+     - Source Directory:   "\\..OpenCV_Path..\OpenCV-android-sdk\sdk\java"
     
      - Hit Next
      
@@ -58,7 +58,7 @@ Configure OpenCV
     
         New Folder Location:    "src/main/jniLibs/"
         
-    - Copy all the files in OpenCV download path "<path>\OpenCV-android-sdk\sdk\native\libs"
+    - Copy all the files in OpenCV download path "\\..OpenCV_Path..\OpenCV-android-sdk\sdk\native\libs"
     
     - Paste on "app" in Project View/Navigate and select "...\app\src\main\jniLibs"
     
@@ -111,8 +111,8 @@ Common Errors and Workarounds
 
     - Remedy: Set the Project view to "Project"
         <pre>
-        Locate <projectName>\OpenCVLibraryXXX\src\build.gradle
-        change the following to the current available versions in the Android Studio that you are currently working with (check the build.gradle file in <projectPath>\app\build.gradle)
+        Locate \\..projectName..\OpenCVLibraryXXX\src\build.gradle
+        change the following to the current available versions in the Android Studio that you are currently working with (check the build.gradle file in \\..projectPath..\app\build.gradle)
 
         compileSdkVersion 14
         buildToolsVersion "19.1.0"
@@ -131,14 +131,14 @@ NDK integration is deprecated in the current plugin.  Consider trying the new ex
         android.useDeprecatedNdk=true
         </pre>
         
-Error:Execution failed for task ':app:compileDebugNdk'. 
+- Error:Execution failed for task ':app:compileDebugNdk'. 
 NDK not configured. 
 Download the NDK from http://developer.android.com/tools/sdk/ndk/.Then add ndk.dir=path/to/ndk in local.properties.
 (On Windows, make sure you escape backslashes, e.g. C:\\ndk rather than C:\ndk)        
         
    - Remedy: goto local.properties and add the following line
         <pre>
-        ndk.dir=<NDK_Path>
+        ndk.dir=\\..NDK_Path\
         </pre>
         ex: ndk.dir=C\:\\AndroidStudio\\android-ndk-r15c-windows-x86_64\\android-ndk-r15c
         
