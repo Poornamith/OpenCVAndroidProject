@@ -123,19 +123,20 @@ Common Errors and Workarounds
         buildToolsVersion "23.0.1"
         </pre>   
 
-- Error:Execution failed for task ':app:compileDebugNdk'. Error: NDK integration is deprecated in the current plugin.  Consider trying the new experimental plugin.  For details, see http://tools.android.com/tech-docs/new-build-system/gradle-experimental.  Set "android.useDeprecatedNdk=true" in gradle.properties to continue using the current NDK integration.
+- Error:Execution failed for task ':app:compileDebugNdk'.
+NDK integration is deprecated in the current plugin.  Consider trying the new experimental plugin.  For details, see http://tools.android.com/tech-docs/new-build-system/gradle-experimental.  Set "android.useDeprecatedNdk=true" in gradle.properties to continue using the current NDK integration.
 
-    - Remedy: goto gradle.properties and add the following line
+   - Remedy: goto gradle.properties and add the following line
         <pre>
         android.useDeprecatedNdk=true
         </pre>
         
-Error:Execution failed for task ':app:compileDebugNdk'.
-> NDK not configured.
+Error:Execution failed for task ':app:compileDebugNdk'. 
+NDK not configured. 
 Download the NDK from http://developer.android.com/tools/sdk/ndk/.Then add ndk.dir=path/to/ndk in local.properties.
 (On Windows, make sure you escape backslashes, e.g. C:\\ndk rather than C:\ndk)        
         
-     - Remedy: goto local.properties and add the following line
+   - Remedy: goto local.properties and add the following line
         <pre>
         ndk.dir=<NDK_Path>
         </pre>
