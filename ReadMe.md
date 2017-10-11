@@ -111,7 +111,7 @@ Common Errors and Workarounds
 
     - Remedy: Set the Project view to "Project"
         <pre>
-        Locate \\..projectName..\OpenCVLibraryXXX\src\build.gradle
+        Locate \\..projectName..\OpenCVLibraryXXX\build.gradle
         change the following to the current available versions in the Android Studio that you are currently working with (check the build.gradle file in \\..projectPath..\app\build.gradle)
 
         compileSdkVersion 14
