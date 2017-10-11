@@ -1,6 +1,8 @@
 OpenCV in Android Studio:
+==============
 
-Download the dependancies
+
+- Download the dependancies
 OpenCV library: https://opencv.org/releases.html (Android Pack)
 Android NDK:    https://developer.android.com/ndk/downloads/index.html
 
