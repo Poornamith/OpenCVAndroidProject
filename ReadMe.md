@@ -15,8 +15,11 @@ Configure OpenCV
 
     ex:- 
         Application Name:   OpenCVTest
+        
         Minimum SDK:        API 15
+        
         Activity:           Empty Activity
+        
 
 
 - Add Module
@@ -142,6 +145,15 @@ Download the NDK from http://developer.android.com/tools/sdk/ndk/.Then add ndk.d
         </pre>
         ex: ndk.dir=C\:\\AndroidStudio\\android-ndk-r15c-windows-x86_64\\android-ndk-r15c
         
+- Error:Execution failed for task ':app:compileDebugNdk'.
+com.android.ide.common.process.ProcessException: Error while executing process D:\Android\sdk\ndk-bundle\ndk-build.cmd with arguments {NDK_PROJECT_PATH=null APP_BUILD_SCRIPT=C:\Users\poornamith\AndroidStudioProjects\MyApplication7\app\build\intermediates\ndk\debug\Android.mk APP_PLATFORM=android-25 NDK_OUT=C:\Users\poornamith\AndroidStudioProjects\MyApplication7\app\build\intermediates\ndk\debug\obj NDK_LIBS_OUT=C:\Users\poornamith\AndroidStudioProjects\MyApplication7\app\build\intermediates\ndk\debug\lib APP_ABI=all}
+      
+   - Remedy: goto build.gradle (Module:app)
+   
+        and remove the following line
+       <pre>
+       sourceSets { main { jni.srcDirs = ['src/main/jni', 'src/main/jniLibs/'] } }
+       </pre>
         
 References
 ==============
